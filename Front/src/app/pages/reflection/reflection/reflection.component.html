@@ -1,0 +1,14 @@
+<p>Contador: {{visitsCounter}}</p>
+
+<button id="button" (click)="onButtonClick()">
+    Get DLLs names
+</button>
+
+@if (dllNames != null) {
+<ul>
+    <p>Nombres de las dlls:</p>
+    @for (dllname of dllNames; track dllname) {
+    <li>@dllName</li>
+    }
+</ul>
+}
