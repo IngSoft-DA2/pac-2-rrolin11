@@ -1,7 +1,13 @@
 using APIServiceFactory;
+using BackApi.Interfaces;
+using BackApi.Services;
+using WebService.Filters;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddScoped<IReflectionService, ReflectionService>();
+
+builder.Services.AddControllers(o => o.Filters.Add<ExceptionFilter>());
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

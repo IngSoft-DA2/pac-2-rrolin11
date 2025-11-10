@@ -12,6 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\APIServiceFactory\APIServiceFactory.csproj" />
+    <ProjectReference Include="..\BackApi.Interfaces\BackApi.Interfaces.csproj" />
+    <ProjectReference Include="..\BackApi.Services\BackApi.Services.csproj" />
   </ItemGroup>
 
   <ItemGroup>
